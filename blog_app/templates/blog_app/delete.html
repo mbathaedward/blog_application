@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog App: Delete</title>
+</head>
+<body>
+    <h1>Delete Post</h1>
+    <div>
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>Are you sure you want to delete post? {{ post.title }}</p>
+            <button type="submit">Delete now</button>
+        </form>
+    </div>
+    
+{% endblock content %}

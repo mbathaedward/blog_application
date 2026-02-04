@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+         <p>Title:{{ post.title }}</p>
+        <p>content:{{ post.content }}</p>
+        <p>Author:{{ post.author }}</p>
+        <p>Date_created:{{ post.date_created }}</p>
+       
+    </div>
+    <button><p><a href="{% url 'delete' post.id %}">Delete Post</a></p></button> 
+    <button><p><a href="{% url 'update' post.id %}">Update post</a></p></button>
+  <button><p><a href="{% url 'list' %}" class="backbtn">Back to posts</a></p></button> 
+
+   
+    
+{% endblock content %}

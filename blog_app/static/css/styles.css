@@ -1,0 +1,129 @@
+/* Reset & base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    padding: 30px;
+    color: #333;
+}
+
+/* Page title */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #222;
+}
+
+/* Table container */
+.table-container {
+    max-width: 1000px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table header */
+thead {
+    background-color: #0e161d;
+}
+
+thead th {
+    color: #ffffff;
+    text-align: left;
+    padding: 12px;
+    font-size: 20px;
+}
+
+/* Table body rows */
+tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:hover {
+    background-color: #f1f5ff;
+}
+
+/* Table cells */
+td {
+    padding: 12px;
+    font-size: 14px;
+}
+
+
+/* Links */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Empty message */
+tbody td[colspan] {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+.footer{
+    text-align: center;
+    margin-top: 20px;
+}
+.authbtn{
+    background-color: #cf7964;
+    color: #000;
+    text-decoration: none;
+   
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    td {
+        padding: 8px 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    td::before {
+        font-weight: bold;
+        color: #555;
+    }
+
+    td:nth-child(1)::before { content: "NO.P"; }
+    td:nth-child(2)::before { content: "Title"; }
+    td:nth-child(3)::before { content: "Author"; }
+    td:nth-child(4)::before { content: "Date"; }
+}
+
