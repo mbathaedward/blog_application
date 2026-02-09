@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% load post_filters %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,11 +18,12 @@
         <table>
             <thead>
                 <tr>
-                    <th>Nos.p</th>
+                    <th>No.p</th>
                     <th>Title</th>
                     <th>Author</th>
-                    
                     <th>Date Created</th>
+                    <th>Status</th>
+                    
                     
                 </tr>
             </thead>
@@ -35,6 +37,13 @@
                     </td>
                     <td>{{ post.author }}</td>
                     <td>{{ post.date_created }}</td>
+                    <td>{{ post.status|post_status }}</td>
+                    
+                    
+                    
+                   
+                    
+                    
                 </tr>
                 {% empty %}
                 <tr>

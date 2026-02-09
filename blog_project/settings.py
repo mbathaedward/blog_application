@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -118,9 +118,21 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIR = [ BASE_DIR / 'static' ]
+# Media files (uploaded images)
+MEDIA_ROOT = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STATICFILES_DIR = (
+    os.path.join(BASE_DIR, 'static')
+)
+
 
 
 #Authetiation
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRET_URL = '/auth/login'
+LOGOUT_REDIRET_URL = '/auth/logout'
 LOGIN_URL = 'login'
+
+
+
+

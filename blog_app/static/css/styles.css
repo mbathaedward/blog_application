@@ -91,7 +91,11 @@ tbody td[colspan] {
     text-decoration: none;
    
 }
-
+.banner{
+    display: block;
+    width: 100%;
+    max-width: 800px;
+}
 /* Responsive table */
 @media (max-width: 768px) {
     table, thead, tbody, th, td, tr {
