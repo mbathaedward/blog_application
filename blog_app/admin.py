@@ -3,7 +3,7 @@ from .models import Post
 #customizing admin 
 class PostMOdel(admin.ModelAdmin):
     list_display = ['title','content','date_created']
-    search_fields = ['tile','date_created']
+    search_fields = ['title','date_created']
 
 
 

@@ -16,8 +16,8 @@
 
        
     </div>
-     <img class="banner"
-             src="{{ post.images.url }}"
-             alt="{{ post.title }}"/>
+     {% if post.image %}
+     <img class="banner" src="{{ post.image.url }}" alt="{{ post.title }}">
+     {% endif %}
     {% endblock content %}
 

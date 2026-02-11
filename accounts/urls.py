@@ -5,8 +5,8 @@ app_name = 'auth'
 
 urlpatterns = [
 
-    path('login/', views.user_login, name='login'),
+    path('auth/login/', views.user_login, name='login'),
     path('register/', views.register, name='register'),
-    path('logout/', views.user_logout, name='logout'),
+    path('auth/logout/', views.user_logout, name='logout'),
 
 ]

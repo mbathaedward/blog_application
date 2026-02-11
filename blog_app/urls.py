@@ -1,7 +1,8 @@
 from django.urls import path
 from .views import post_list,post_detail,post_create,post_delete,post_update
-from django.conf import settings
 from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     

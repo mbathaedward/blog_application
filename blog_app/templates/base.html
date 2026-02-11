@@ -12,9 +12,9 @@
         <nav>
             <ul>
                 {% if user.is_authenticated %}
-                <li><a href="{% url 'auth:logout' %}" class="authbtn">Logout</a></li>
+                <li><a href="{% url 'logout' %}" class="authbtn">Logout</a></li>
                 {% else %}
-                <li><a href="{% url 'auth:login' %}" class="authbtn">Login</a></li>
+                <li><a href="{% url 'login' %}" class="authbtn">Login</a></li>
                 {% endif %}
             </ul>
         </nav>
